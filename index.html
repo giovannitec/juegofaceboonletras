@@ -100,13 +100,13 @@ color: #ffffff;
     color: #9752cc;
 }
 
-#myAudio{
+#idmiaduio{
 
     z-index: 45;
     position: absolute;
 
-    top:5%;
-    left:34.0%;
+    top:95%;
+    left:90.0%;
   
 }
 
@@ -117,10 +117,10 @@ color: #ffffff;
 
     <div id="idtodocontendor">
 
-            <audio id="myAudio">aca
-    
+            <audio id="idmiaduio" controls>aca
+               
                     <source src="suletras.mp3" type="audio/mpeg">
-                 
+                    Your browser does not support the audio tag.
                   </audio>
 
 
@@ -392,6 +392,21 @@ empezarDetener();
 	function LeadingZero(Time) {
 		return (Time < 10) ? "0" + Time : + Time;
 	}
+
+
+
+    var xaudio = document.getElementById("idmiaduio"); 
+
+function playAudio() { 
+    xaudio.play(); 
+    xaudio.loop=true;
+} 
+
+function pauseAudio() { 
+    xaudio.pause(); 
+}
+playAudio();
+var audio = new Audio('suletras.mp3');
 
 
 
